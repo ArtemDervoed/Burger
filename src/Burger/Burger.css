@@ -59,11 +59,8 @@
   stroke-dashoffset: 0; */
 }
 
-/* .closeHide > path {
+.closeHide > path {
   stroke-dashoffset: 27px;
 }
-
-.closeHide:hover > path {
-  stroke-dashoffset: 27px;
-  animation-name: none !important;
-} */
+ animation-name: none !important;
+}
