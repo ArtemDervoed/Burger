@@ -11,25 +11,59 @@
 }
 
 .close > path {
-  stroke-dasharray: none;
-  stroke-dashoffset: 1e-05;
+  stroke-dasharray: 27px;
+  transition-duration: .4s;
+}
+
+.close > path:nth-child(2) {
+  stroke-dasharray: 27px;
+  animation-delay: 0.05s;
+}
+
+.close > path:nth-child(3) {
+  stroke-dasharray: 27px;
+  animation-delay: 0.1s;
+}
+
+.close > path:nth-child(4) {
+  stroke-dasharray: 27px;
+  animation-delay: 0.15s;
 }
 
 @keyframes closeHover {
-  from {
-    stroke-dasharray: 27, 37px;
-    stroke-dashoffset: 0;
+  0% {
+    stroke-dashoffset: 54px;
   }
 
-  to {
-    stroke-dasharray: 0, 37px;
-    stroke-dashoffset: -27px;
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes closeHide {
+  0% {
+    stroke-dashoffset: 54px;
+  }
+
+  100% {
+    stroke-dashoffset: 27px;
   }
 }
 
 .close:hover > path {
   cursor: pointer;
   animation-name: closeHover;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
+  animation-duration: 0.4s;
+  animation-fill-mode: backwards;
+  /* stroke-dasharray: 27px, 37px;
+  stroke-dashoffset: 0; */
 }
+
+/* .closeHide > path {
+  stroke-dashoffset: 27px;
+}
+
+.closeHide:hover > path {
+  stroke-dashoffset: 27px;
+  animation-name: none !important;
+} */
