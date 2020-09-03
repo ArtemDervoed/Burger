@@ -1,0 +1,35 @@
+.root {
+  width: 150px;
+  height: 150px;
+}
+
+.close {
+  width: 26px;
+  height: 26px;
+  stroke: #000;
+  stroke-width: 4px;
+}
+
+.close > path {
+  stroke-dasharray: none;
+  stroke-dashoffset: 1e-05;
+}
+
+@keyframes closeHover {
+  from {
+    stroke-dasharray: 27, 37px;
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dasharray: 0, 37px;
+    stroke-dashoffset: -27px;
+  }
+}
+
+.close:hover > path {
+  cursor: pointer;
+  animation-name: closeHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
